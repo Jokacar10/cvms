@@ -6,7 +6,6 @@ on:
     branches:
       - develop # Or your fork's default branch name, e.g., develop, master
       - release
-      - "feature/**" # This will match 'feature/golangci-lint' and other feature branches
     tags:
       - "v*.*.*" # For release tagging later
   pull_request: # On every pull request targeting the main branch

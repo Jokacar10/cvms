@@ -16,7 +16,6 @@ import (
 	"github.com/spf13/pflag"
 )
 
-// ServerBuilder는 CVMS 서버 빌더 함수의 타입을 정의합니다
 type ServerBuilder func(
 	port string,
 	logger *logrus.Logger,
