@@ -1389,6 +1389,13 @@ teritori-1:
     - upgrade
     - uptime
     - voteindexer
+test6:
+  chain_name: test6
+  protocol_type: cosmos
+  mainnet: false
+  support_asset:
+  packages:
+    - block
 test-core-2:
   chain_name: persistence
   protocol_type: cosmos
