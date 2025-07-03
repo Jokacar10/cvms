@@ -45,7 +45,6 @@ func GnolandBlockParser(resp []byte) (
 	var lastCommitHeightString string
 	sigs := make([]types.GnolandSignature, 0)
 	for idx, pc := range result.Result.Block.LastCommit.PreCommits {
-
 		if idx == 0 {
 			lastCommitHeightString = pc.Height
 		}
@@ -66,7 +65,6 @@ func GnolandBlockParser(resp []byte) (
 	txs := result.Result.Block.Data.Txs
 	proposerAddress := result.Result.Block.Header.ProposerAddress
 	return blockHeight, blockTimestamp, proposerAddress, txs, lastCommitBlockHeight, sigs, nil
-
 }
 
 func GnolandABCIParser(resp []byte) (string, error) {

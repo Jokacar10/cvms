@@ -39,7 +39,6 @@ func NewVoteIndexer(p common.Packager) (*VoteIndexer, error) {
 }
 
 func (vidx *VoteIndexer) Start() error {
-
 	err := vidx.InitChainInfoID()
 	if err != nil {
 		return errors.Wrap(err, "failed to init chain_info_id")
