@@ -39,7 +39,7 @@ func GetStatus(c common.CommonClient) (
 	return latestBlockHeight, latestBlockTimestamp, nil
 }
 
-// query a new block to find missed validators index
+//nolint:dupl // cosmos block is default logic
 func GetBlock(c common.CommonClient, height int64) (
 	/* block height */ int64,
 	/* block timestamp */ time.Time,

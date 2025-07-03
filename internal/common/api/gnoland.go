@@ -51,7 +51,7 @@ func GetGnolandBFTValidators(c common.CommonClient, height ...int64) ([]types.Gn
 	return totalValidators, nil
 }
 
-// query a new block to find missed validators index
+//nolint:dupl // gnoland block is similar logic with cosmos chains, but in the future, the logic will be changed via very different way
 func GetGnolandBlock(c common.CommonClient, height int64) (
 	/* block height */ int64,
 	/* block timestamp */ time.Time,
