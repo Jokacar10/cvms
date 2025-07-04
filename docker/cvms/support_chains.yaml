@@ -1291,7 +1291,7 @@ ssc-1:
     - upgrade
     - uptime
     - voteindexer
-ssc-testnet-2:
+ssc-testnet-3:
   chain_name: saga
   protocol_type: cosmos
   mainnet: false
