@@ -1353,7 +1353,7 @@ sahara-test-1:
     - uptime
     - voteindexer
     - block-data-analytics
-imuachaintestnet_233-8:
+imuachaintestnet_233-9:
   chain_name: imua
   protocol_type: cosmos
   mainnet: false
