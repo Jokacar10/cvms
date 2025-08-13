@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 9,
+  "id": 15,
   "links": [],
   "panels": [
     {
@@ -43,7 +43,7 @@
         "content": "<!-- Main content -->\n<div style=\"display: flex; justify-content: space-between; align-items: center;\">\n  <!-- H2 with a link -->\n   <a href=\"https://github.com/cosmostation/cvms\" target=\"_blank\" style=\"text-decoration: none; color: inherit;\">\n    <h2 style=\"margin-right: 10px;\">Cosmos Validator Monitoring Service (CVMS) 🌌 🔭</h2>\n  </a> \n  <!-- \"Powered by Cosmostation\" on the right -->\n  <div style=\"display: flex; align-items: center;\">\n    <a href=\"https://cosmostation.io\" target=\"_blank\" style=\"text-decoration: none; color: inherit;\">\n        <span>Powered by Cosmostation </span>\n        <img src=\"https://raw.githubusercontent.com/cosmostation/chainlist/refs/heads/main/resource/cosmostation/cosmostation_color.svg\" alt=\"Logo\" style=\"height: 30px; margin-left: 5px;\">\n    </a>\n  </div>\n</div>\n\n<!-- Paragraph below the header -->\n<p>\n  The Cosmos Validator Monitoring Service (CVMS) is an open-source, integrated monitoring system designed for validators and network in the Cosmos app chain ecosystem.<br/>\n  This public dashboard is part of the beta launch, with the open-source repository coming soon.\n</p>\n<p>\n  <a href=\"https://public-cosmos-vms.cosmostation.io/d/be37h6ce99dz4e/network-duty-dashboard?from=now-30m\" target=\"_blank\" style=\"text-decoration: none; color: #1E90FF;\">\n    👉 Validator Duty Overview Click Here\n  </a> \n  <a href=\"https://public-cosmos-vms.cosmostation.io\" target=\"_blank\" style=\"text-decoration: none; color: #1E90FF;\">\n    👉 Validator Consensus Overview Click Here\n  </a> \n</p>",
         "mode": "html"
       },
-      "pluginVersion": "11.3.0",
+      "pluginVersion": "12.0.2",
       "title": "",
       "transparent": true,
       "type": "text"
@@ -70,8 +70,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
-                "value": null
+                "color": "green"
               },
               {
                 "color": "red",
@@ -102,7 +101,7 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "11.3.0",
+      "pluginVersion": "12.0.2",
       "targets": [
         {
           "datasource": {
@@ -226,7 +225,7 @@
   ],
   "preload": false,
   "refresh": "5s",
-  "schemaVersion": 40,
+  "schemaVersion": 41,
   "tags": [],
   "templating": {
     "list": [
@@ -239,14 +238,14 @@
           "type": "prometheus",
           "uid": "cvms_exporter_db"
         },
-        "definition": "label_values(cvms_block_timestamp{chain_id=\"ssc-testnet-3\"},table_chain_id)",
+        "definition": "label_values(cvms_block_timestamp,table_chain_id)",
         "includeAll": false,
         "label": "Chain ID",
         "name": "chain_id",
         "options": [],
         "query": {
           "qryType": 1,
-          "query": "label_values(cvms_block_timestamp{chain_id=\"ssc-testnet-3\"},table_chain_id)",
+          "query": "label_values(cvms_block_timestamp,table_chain_id)",
           "refId": "PrometheusVariableQueryEditor-VariableQuery"
         },
         "refresh": 1,
@@ -303,6 +302,5 @@
   "timezone": "browser",
   "title": "Saga Consensus Dashboard",
   "uid": "saga_dashboard",
-  "version": 1,
-  "weekStart": ""
+  "version": 2
 }
