@@ -84,7 +84,7 @@ func TestBatchSync(t *testing.T) {
 	err = idx.FetchValidatorInfoList()
 	assert.NoError(t, err)
 
-	newIndexPointer, err := idx.batchSync(94810)
+	newIndexPointer, err := idx.batchSync(idx.ChainID, 94810)
 	assert.NoError(t, err)
 	t.Logf("new index point: %d", newIndexPointer)
 }
@@ -92,7 +92,8 @@ func TestBatchSync(t *testing.T) {
 func TestGetFinalityProvidersInfo(t *testing.T) {
 	app := common.NewCommonApp(p)
 	app.SetAPIEndPoint(BabylonBaseURL)
-	fpInfoList, err := api.GetBabylonFinalityProviderInfos(app.CommonClient)
+	chainID := "bbn-testnet-5"
+	fpInfoList, err := api.GetBabylonFinalityProviderInfos(app.CommonClient, chainID)
 	assert.NoError(t, err)
 	t.Logf("new fp infos: %d", len(fpInfoList))
 	for idx, fp := range fpInfoList {
